@@ -4,6 +4,9 @@
 #include <codecvt>
 #include <string>
 #include <Windows.h>
+
+#include <typeinfo>
+
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
@@ -24,4 +27,8 @@ int main() {
     std::cout << "int 的大小: " << sizeof(int) << " 位元組" << std::endl;
     std::cout << "char 的大小: " << sizeof(char) << " 位元組" << std::endl;
     std::cout << "double 的大小: " << sizeof(double) << " 位元組" << std::endl;
+
+    auto age2 = 30; // 自動推斷型別
+    std::cout << "age2 is: " << age2 << std::endl;
+    std::cout << "age2 type is" << typeid(age2).name() << std::endl;
 }
