@@ -10,6 +10,9 @@ public:
     double getRadius() {
         return radius;
     }
+    ~Circle(){
+        cout << "Circle destructor called" << endl;
+    }
 };
 
 int main() {
